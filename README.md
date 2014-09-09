@@ -2,7 +2,7 @@
 
 
 This App demonstrates how to:
-- getting AngularJS working with SocketIO 
+- get AngularJS working with SocketIO 
 - use Express sessions within Socket.io code
 - connect to Redis Database (our session store)
 - Get, set, destroy operations on Redis from Node
