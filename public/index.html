@@ -1,0 +1,50 @@
+<!-- 
+
+-->
+
+<!DOCTYPE html>
+
+<html ng-app="myApp">
+
+<head>
+    <meta charset = "utf-8">
+    <title>Sessions with SIO</title>
+</head>
+
+<body ng-controller="MainCtrl">
+
+    <h1>nG with Express Sessions, Socket.io and Redis Database</h1>
+    <h2><strong>Browser Storage</strong></h2>
+    <p><strong>The session ID (sid) cookie stored on the browser.</strong></p>
+    {{sidCookie}}
+
+    <hr>
+
+    <p><strong>Extracted from the sid cookie by JS string manipulation
+    This is identical to the Express Session ID (sid) that is stored in Redis</strong></p>
+    {{sessionID}}
+
+    <hr>
+    <p>Time gets updated by server every 5 seconds</p>
+    <p>The Time is: {{time}}</p>
+    <p>News is: {{news}}</p>
+
+    <hr>
+    
+    <button class="btn btn-danger" ng-click="destroySession()">Destroy session variables in Redis</button>
+    
+ 
+    <!--<script src="bower_components/socket.io-client/socket.io.js"></script> -->
+    <!-- socket.io client code -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+ 
+    <!-- Brian Fords module for using Socket.io with Angular -->
+    <script src="bower_components/angular-socket-io/socket.js"></script>   
+    <script src="js/services/services.js"></script>
+    <script src="js/controllers/controllers.js"></script>
+    <script src="js/app.js"></script>
+ 
+</body>
+</html>
